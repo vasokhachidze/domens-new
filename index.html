@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1a502cf826.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/fonts/fonts.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="js/main.js" defer></script>
+    <title>Domenebi.ge</title>
+</head>
+<body>
+    <!-- start herader -->
+    <header>
+        <div class="white-back"></div>
+        <div class="top-header">
+            <div class="logo"><a href="index.html"><img src="images/Symbols (1).svg" alt="image-logo"></a></div>
+            <div class="user-information">
+                <div class="icon-box">
+                    <img src="images/ring.svg" alt="icon">
+                </div>
+                <div class="icon-box addCart">
+                    <img src="images/cart.svg" id="cart" alt="icon">
+                    <span>0</span>
+                </div>
+                <div class="user-name">
+                    <img src="images/humen.svg " alt="icon">
+                    <span>username</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="icon-box">
+                    <img class="georgia" src="images/georgia.svg" alt="icon">
+                </div>
+            </div>
+        </div>
+        <div class="bottom-header d-flex-between">
+            <div class="nav-left ">
+                <a href="#">დომენი</a>
+                <a href="#">ტრანსფერი</a>
+                <a href="#">ჰოსტინგი</a>
+                <a href="#">Gmail</a>
+                <a href="#">ვებგვერდი</a>
+                <a href="#" class="active">დომენის მარკეტი</a> 
+            </div>
+            <div class="nav-right">
+                <a href="#">ჩვენს შესახებ</a>
+                <a href="#">ფასები</a>
+                <a href="#">ბლოგი</a>
+                <a href="#">დახმარება</a>
+            </div>
+        </div>
+    </header>
+    <section class="bg-image">
+        <div class="bg-black-back d-flex-center">
+            <h1>გაყიდე და იყიდე დომენი მარტივად</h1>
+        </div>
+    </section>
+    <section class="how-sale d-flex-between">
+         <div class="domen-market-text">
+            <span>დომენები მარკეტზე: <strong>703</strong></span>
+         </div>
+         <div class="sort">
+            <ul>
+                <li>სორტირება:</li>
+                <li class="active">დამატების თარიღით <img src="images/d.svg" alt="image"></li>
+                <li>ვადის ამოწურვით</li>
+                <li>ფასით</li>
+                <li>ანბანით</li>
+            </ul>
+         </div>
+         <div class="sale-domen">
+            <h2><a href="#">როგორ გავყიდო დომენი?</a></h2>
+         </div>
+    </section>
+    <section class="domens-body">
+        <div class="filter-body">
+            <form action="index.html" method="get">
+                <input type="text" id="search-name" placeholder="სახელით ძიება">
+                <label for="price">ფასი</label>
+                <div class="price-inputs-box">
+                    <div class="price-box"><input type="number" class="start-price" value="50"><i class="fa-solid fa-lari-sign"></i></div>
+                    <div class="price-box"><input type="number" class="end-price" value="50000"><i class="fa-solid fa-lari-sign"></i></div>
+                </div>
+                <div class="slider-box">
+                    <input type="range" class="min-input" min="0" max="50000" value="1000" step="100">
+                    <input type="range" min="0" max="50000" value="50000" step="100">
+                    <div class="progress"></div>
+                </div>
+                <label for="simbols">სიმბოლოების რაოდენობა</label>
+                <div class="simbol-inputs-box">
+                    <div class="price-box simbol"><input type="number" class="s-s-input" value="0"></div>
+                    <div class="price-box simbol"><input type="number" class="e-s-input" value="26"></div>
+                </div>
+                <div class="simbol-box">
+                    <input type="range" class="input-min" min="0" max="26" value="0">
+                    <input type="range" min="0" max="26" value="26">
+                    <div class="progressS"></div>
+                </div>
+                <div id="search">ძიება<i class="fa-solid fa-magnifying-glass"></i></div>
+                <label for="">კატეგორიები</label>
+                <div class="checkbox-box">
+                    <ul>
+                        <li><input type="checkbox" name="" id=""><span>ბიზნესი</span></li>
+                        <li><input type="checkbox" name="" id=""><span>უძრავი ქონება</span></li>
+                        <li><input type="checkbox" name="" id=""><span>ავტო</span></li>
+                        <li><input type="checkbox" name="" id=""><span>მედიცინა</span></li>
+                        <li><input type="checkbox" name="" id=""><span>ტექნოლოგიები</span></li>
+                        <li><input type="checkbox" name="" id=""><span>თამაშები</span></li>
+                        <li><input type="checkbox" name="" id=""><span>გართობა და დასვენება</span></li>
+                        <li><input type="checkbox" name="" id=""><span>მედია</span></li>
+                        <li><input type="checkbox" name="" id=""><span>განათლება</span></li>
+                        <li><input type="checkbox" name="" id=""><span>კომერცია</span></li>
+                        <li><input type="checkbox" name="" id=""><span>ფინანსები</span></li>
+                        <li><input type="checkbox" name="" id=""><span>ბიზნესი</span></li>
+                    </ul>
+                    <label for="">დომენის ზომა</label>
+                    <ul class="second-line-check">
+                        <li><input type="checkbox" name="" id="ts" value=".ge" onclick="myFynction()"><span>.ge</span></li>
+                        <li><input type="checkbox" name="" id="" value=".com.ge" onclick="myFynction()"><span>.com.ge</span></li>
+                        <li><input type="checkbox" name="" id="" value=".net.ge" onclick="myFynction()"><span>.net.ge</span></li>
+                        <li><input type="checkbox" name="" id="" value=".org.ge" onclick="myFynction()"><span>.org.ge</span></li>
+                        <li><input type="checkbox" name="" id="" value=".edu.ge" onclick="myFynction()"><span>.edu.ge</span></li>
+                        <li><input type="checkbox" name="" id="" value=".school.ge" onclick="myFynction()"><span>.school.ge</span></li>
+                    </ul>
+                    
+                </div>
+            </form>
+        </div>
+        <div class="domens">
+            <div class="container .ge" aria-valuenow="40000" data-filter="domenebi.ge">
+                <div class="domen-box">
+                    <div class="domen-box-left">
+                            <i class="fa-solid fa-angle-down"></i>
+                          <h2>domenebi.ge</h2>
+                    </div>
+                    <div class="domen-box-right">
+                        <div class="domen-price-box">
+                            <strong>40 000 <i class="fa-solid fa-lari-sign"></i></strong>
+                            <span>14.285.7 $</span>
+                        </div>
+                        <div class="cart-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="cart-click">
+                                <div class="new-box">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>კალათშია</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="domen-info">
+                    <div class="flexer">
+                        <div class="date-box">
+                            <h2>რეგისტრაციის თარიღი:</h2>
+                            <span>17.04.2018</span>
+                        </div>
+                        <div class="date-box">
+                           <h2>გათიშვის თარიღი:</h2>
+                           <span>27.02.2023</span>
+                        </div>
+                        <div class="date-box ">
+                            <h2>NS ჩანაწერები:</h2>
+                            <span>parking1.domenebi.ge</span>
+                            <span>parking2.domenebi.ge</span>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container .com.ge" aria-valuenow="32000" data-filter="domenebi.com.ge">
+                <div class="domen-box">
+                    <div class="domen-box-left">
+                            <i class="fa-solid fa-angle-down"></i>
+                          <h2>domenebi.com.ge</h2>
+                    </div>
+                    <div class="domen-box-right">
+                        <div class="domen-price-box">
+                            <strong>32 000 <i class="fa-solid fa-lari-sign"></i></strong>
+                            <span>14.285.7 $</span>
+                        </div>
+                        <div class="cart-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="cart-click">
+                                <div class="new-box">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>კალათშია</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="domen-info">
+                    <div class="flexer">
+                        <div class="date-box">
+                            <h2>რეგისტრაციის თარიღი:</h2>
+                            <span>17.04.2018</span>
+                        </div>
+                        <div class="date-box">
+                           <h2>გათიშვის თარიღი:</h2>
+                           <span>27.02.2023</span>
+                        </div>
+                        <div class="date-box ">
+                            <h2>NS ჩანაწერები:</h2>
+                            <span>parking1.domenebi.ge</span>
+                            <span>parking2.domenebi.ge</span>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container .net.ge" aria-valuenow="41000" data-filter="domenebi.net.ge">
+                <div class="domen-box">
+                    <div class="domen-box-left">
+                            <i class="fa-solid fa-angle-down"></i>
+                          <h2>domenebi.net.ge</h2>
+                    </div>
+                    <div class="domen-box-right">
+                        <div class="domen-price-box">
+                            <strong>41 000 <i class="fa-solid fa-lari-sign"></i></strong>
+                            <span>14.285.7 $</span>
+                        </div>
+                        <div class="cart-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="cart-click">
+                                <div class="new-box">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>კალათშია</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="domen-info">
+                    <div class="flexer">
+                        <div class="date-box">
+                            <h2>რეგისტრაციის თარიღი:</h2>
+                            <span>17.04.2018</span>
+                        </div>
+                        <div class="date-box">
+                           <h2>გათიშვის თარიღი:</h2>
+                           <span>27.02.2023</span>
+                        </div>
+                        <div class="date-box ">
+                            <h2>NS ჩანაწერები:</h2>
+                            <span>parking1.domenebi.ge</span>
+                            <span>parking2.domenebi.ge</span>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container .org.ge" aria-valuenow="8000" data-filter="domenebi.org.ge">
+                <div class="domen-box">
+                    <div class="domen-box-left">
+                            <i class="fa-solid fa-angle-down"></i>
+                          <h2>domenebi.org.ge</h2>
+                    </div>
+                    <div class="domen-box-right">
+                        <div class="domen-price-box">
+                            <strong>8 000 <i class="fa-solid fa-lari-sign"></i></strong>
+                            <span>14.285.7 $</span>
+                        </div>
+                        <div class="cart-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="cart-click">
+                                <div class="new-box">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>კალათშია</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="domen-info">
+                    <div class="flexer">
+                        <div class="date-box">
+                            <h2>რეგისტრაციის თარიღი:</h2>
+                            <span>17.04.2018</span>
+                        </div>
+                        <div class="date-box">
+                           <h2>გათიშვის თარიღი:</h2>
+                           <span>27.02.2023</span>
+                        </div>
+                        <div class="date-box ">
+                            <h2>NS ჩანაწერები:</h2>
+                            <span>parking1.domenebi.ge</span>
+                            <span>parking2.domenebi.ge</span>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container .school.ge" aria-valuenow="23000" data-filter="domenebi.school.ge">
+                <div class="domen-box">
+                    <div class="domen-box-left">
+                            <i class="fa-solid fa-angle-down"></i>
+                          <h2>domenebi.school.ge</h2>
+                    </div>
+                    <div class="domen-box-right">
+                        <div class="domen-price-box">
+                            <strong>23 000 <i class="fa-solid fa-lari-sign"></i></strong>
+                            <span>14.285.7 $</span>
+                        </div>
+                        <div class="cart-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="cart-click">
+                                <div class="new-box">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>კალათშია</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="domen-info">
+                    <div class="flexer">
+                        <div class="date-box">
+                            <h2>რეგისტრაციის თარიღი:</h2>
+                            <span>17.04.2018</span>
+                        </div>
+                        <div class="date-box">
+                           <h2>გათიშვის თარიღი:</h2>
+                           <span>27.02.2023</span>
+                        </div>
+                        <div class="date-box ">
+                            <h2>NS ჩანაწერები:</h2>
+                            <span>parking1.domenebi.ge</span>
+                            <span>parking2.domenebi.ge</span>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container .edu.ge" aria-valuenow="45000" data-filter="domenebi.edu.ge">
+                <div class="domen-box">
+                    <div class="domen-box-left">
+                            <i class="fa-solid fa-angle-down"></i>
+                          <h2>domenebi.edu.ge</h2>
+                    </div>
+                    <div class="domen-box-right">
+                        <div class="domen-price-box">
+                            <strong>45 000 <i class="fa-solid fa-lari-sign"></i></strong>
+                            <span>14.285.7 $</span>
+                        </div>
+                        <div class="cart-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="cart-click">
+                                <div class="new-box">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>კალათშია</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="domen-info">
+                    <div class="flexer">
+                        <div class="date-box">
+                            <h2>რეგისტრაციის თარიღი:</h2>
+                            <span>17.04.2018</span>
+                        </div>
+                        <div class="date-box">
+                           <h2>გათიშვის თარიღი:</h2>
+                           <span>27.02.2023</span>
+                        </div>
+                        <div class="date-box ">
+                            <h2>NS ჩანაწერები:</h2>
+                            <span>parking1.domenebi.ge</span>
+                            <span>parking2.domenebi.ge</span>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container .web.ge" aria-valuenow="50000" data-filter="web.ge">
+                <div class="domen-box">
+                    <div class="domen-box-left">
+                            <i class="fa-solid fa-angle-down"></i>
+                          <h2>web.ge</h2>
+                    </div>
+                    <div class="domen-box-right">
+                        <div class="domen-price-box">
+                            <strong>50 000 <i class="fa-solid fa-lari-sign"></i></strong>
+                            <span>14.285.7 $</span>
+                        </div>
+                        <div class="cart-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="cart-click">
+                                <div class="new-box">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>კალათშია</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="domen-info">
+                    <div class="flexer">
+                        <div class="date-box">
+                            <h2>რეგისტრაციის თარიღი:</h2>
+                            <span>17.04.2018</span>
+                        </div>
+                        <div class="date-box">
+                           <h2>გათიშვის თარიღი:</h2>
+                           <span>27.02.2023</span>
+                        </div>
+                        <div class="date-box ">
+                            <h2>NS ჩანაწერები:</h2>
+                            <span>parking1.domenebi.ge</span>
+                            <span>parking2.domenebi.ge</span>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container .com.ge" aria-valuenow="50" data-filter="web.com.ge">
+                <div class="domen-box">
+                    <div class="domen-box-left">
+                            <i class="fa-solid fa-angle-down"></i>
+                          <h2>web.com.ge</h2>
+                    </div>
+                    <div class="domen-box-right">
+                        <div class="domen-price-box">
+                            <strong>50 <i class="fa-solid fa-lari-sign"></i></strong>
+                            <span>14.285.7 $</span>
+                        </div>
+                        <div class="cart-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="cart-click">
+                                <div class="new-box">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>კალათშია</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="domen-info">
+                    <div class="flexer">
+                        <div class="date-box">
+                            <h2>რეგისტრაციის თარიღი:</h2>
+                            <span>17.04.2018</span>
+                        </div>
+                        <div class="date-box">
+                           <h2>გათიშვის თარიღი:</h2>
+                           <span>27.02.2023</span>
+                        </div>
+                        <div class="date-box ">
+                            <h2>NS ჩანაწერები:</h2>
+                            <span>parking1.domenebi.ge</span>
+                            <span>parking2.domenebi.ge</span>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container .net.ge" aria-valuenow="100" data-filter="web.net.ge">
+                <div class="domen-box">
+                    <div class="domen-box-left">
+                            <i class="fa-solid fa-angle-down"></i>
+                          <h2>web.net.ge</h2>
+                    </div>
+                    <div class="domen-box-right">
+                        <div class="domen-price-box">
+                            <strong>100 <i class="fa-solid fa-lari-sign"></i></strong>
+                            <span>14.285.7 $</span>
+                        </div>
+                        <div class="cart-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="cart-click">
+                                <div class="new-box">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>კალათშია</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="domen-info">
+                    <div class="flexer">
+                        <div class="date-box">
+                            <h2>რეგისტრაციის თარიღი:</h2>
+                            <span>17.04.2018</span>
+                        </div>
+                        <div class="date-box">
+                           <h2>გათიშვის თარიღი:</h2>
+                           <span>27.02.2023</span>
+                        </div>
+                        <div class="date-box ">
+                            <h2>NS ჩანაწერები:</h2>
+                            <span>parking1.domenebi.ge</span>
+                            <span>parking2.domenebi.ge</span>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container .school.ge" aria-valuenow="500" data-filter="web.school.ge">
+                <div class="domen-box">
+                    <div class="domen-box-left">
+                            <i class="fa-solid fa-angle-down"></i>
+                          <h2>web.school.ge</h2>
+                    </div>
+                    <div class="domen-box-right">
+                        <div class="domen-price-box">
+                            <strong>500 <i class="fa-solid fa-lari-sign"></i></strong>
+                            <span>14.285.7 $</span>
+                        </div>
+                        <div class="cart-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="cart-click">
+                                <div class="new-box">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>კალათშია</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="domen-info">
+                    <div class="flexer">
+                        <div class="date-box">
+                            <h2>რეგისტრაციის თარიღი:</h2>
+                            <span>17.04.2018</span>
+                        </div>
+                        <div class="date-box">
+                           <h2>გათიშვის თარიღი:</h2>
+                           <span>27.02.2023</span>
+                        </div>
+                        <div class="date-box ">
+                            <h2>NS ჩანაწერები:</h2>
+                            <span>parking1.domenebi.ge</span>
+                            <span>parking2.domenebi.ge</span>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container .net.ge" aria-valuenow="15000" data-filter="web.net.ge">
+                <div class="domen-box">
+                    <div class="domen-box-left">
+                            <i class="fa-solid fa-angle-down"></i>
+                          <h2>web.net.ge</h2>
+                    </div>
+                    <div class="domen-box-right">
+                        <div class="domen-price-box">
+                            <strong>15 000 <i class="fa-solid fa-lari-sign"></i></strong>
+                            <span>14.285.7 $</span>
+                        </div>
+                        <div class="cart-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="cart-click">
+                                <div class="new-box">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>კალათშია</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="domen-info">
+                    <div class="flexer">
+                        <div class="date-box">
+                            <h2>რეგისტრაციის თარიღი:</h2>
+                            <span>17.04.2018</span>
+                        </div>
+                        <div class="date-box">
+                           <h2>გათიშვის თარიღი:</h2>
+                           <span>27.02.2023</span>
+                        </div>
+                        <div class="date-box ">
+                            <h2>NS ჩანაწერები:</h2>
+                            <span>parking1.domenebi.ge</span>
+                            <span>parking2.domenebi.ge</span>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container .org.ge" aria-valuenow="10000" data-filter="web.org.ge">
+                <div class="domen-box">
+                    <div class="domen-box-left">
+                            <i class="fa-solid fa-angle-down"></i>
+                          <h2>web.org.ge</h2>
+                    </div>
+                    <div class="domen-box-right">
+                        <div class="domen-price-box">
+                            <strong>10 000 <i class="fa-solid fa-lari-sign"></i></strong>
+                            <span>14.285.7 $</span>
+                        </div>
+                        <div class="cart-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="cart-click">
+                                <div class="new-box">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>კალათშია</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="domen-info">
+                    <div class="flexer">
+                        <div class="date-box">
+                            <h2>რეგისტრაციის თარიღი:</h2>
+                            <span>17.04.2018</span>
+                        </div>
+                        <div class="date-box">
+                           <h2>გათიშვის თარიღი:</h2>
+                           <span>27.02.2023</span>
+                        </div>
+                        <div class="date-box ">
+                            <h2>NS ჩანაწერები:</h2>
+                            <span>parking1.domenebi.ge</span>
+                            <span>parking2.domenebi.ge</span>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container .ge" aria-valuenow="5000" data-filter="frontend.ge">
+                <div class="domen-box">
+                    <div class="domen-box-left">
+                            <i class="fa-solid fa-angle-down"></i>
+                          <h2>frontend.ge</h2>
+                    </div>
+                    <div class="domen-box-right">
+                        <div class="domen-price-box">
+                            <strong>5 000 <i class="fa-solid fa-lari-sign"></i></strong>
+                            <span>14.285.7 $</span>
+                        </div>
+                        <div class="cart-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="cart-click">
+                                <div class="new-box">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>კალათშია</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="domen-info">
+                    <div class="flexer">
+                        <div class="date-box">
+                            <h2>რეგისტრაციის თარიღი:</h2>
+                            <span>17.04.2018</span>
+                        </div>
+                        <div class="date-box">
+                           <h2>გათიშვის თარიღი:</h2>
+                           <span>27.02.2023</span>
+                        </div>
+                        <div class="date-box ">
+                            <h2>NS ჩანაწერები:</h2>
+                            <span>parking1.domenebi.ge</span>
+                            <span>parking2.domenebi.ge</span>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container .com.ge" aria-valuenow="2000" data-filter="frontend.com.ge">
+                <div class="domen-box">
+                    <div class="domen-box-left">
+                            <i class="fa-solid fa-angle-down"></i>
+                          <h2>frontend.com.ge</h2>
+                    </div>
+                    <div class="domen-box-right">
+                        <div class="domen-price-box">
+                            <strong>2 000 <i class="fa-solid fa-lari-sign"></i></strong>
+                            <span>14.285.7 $</span>
+                        </div>
+                        <div class="cart-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="cart-click">
+                                <div class="new-box">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>კალათშია</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="domen-info">
+                    <div class="flexer">
+                        <div class="date-box">
+                            <h2>რეგისტრაციის თარიღი:</h2>
+                            <span>17.04.2018</span>
+                        </div>
+                        <div class="date-box">
+                           <h2>გათიშვის თარიღი:</h2>
+                           <span>27.02.2023</span>
+                        </div>
+                        <div class="date-box ">
+                            <h2>NS ჩანაწერები:</h2>
+                            <span>parking1.domenebi.ge</span>
+                            <span>parking2.domenebi.ge</span>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container .school.ge" aria-valuenow="1000" data-filter="frontend.school.ge">
+                <div class="domen-box">
+                    <div class="domen-box-left">
+                            <i class="fa-solid fa-angle-down"></i>
+                          <h2>frontend.school.ge</h2>
+                    </div>
+                    <div class="domen-box-right">
+                        <div class="domen-price-box">
+                            <strong>1 000 <i class="fa-solid fa-lari-sign"></i></strong>
+                            <span>14.285.7 $</span>
+                        </div>
+                        <div class="cart-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="cart-click">
+                                <div class="new-box">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>კალათშია</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="domen-info">
+                    <div class="flexer">
+                        <div class="date-box">
+                            <h2>რეგისტრაციის თარიღი:</h2>
+                            <span>17.04.2018</span>
+                        </div>
+                        <div class="date-box">
+                           <h2>გათიშვის თარიღი:</h2>
+                           <span>27.02.2023</span>
+                        </div>
+                        <div class="date-box ">
+                            <h2>NS ჩანაწერები:</h2>
+                            <span>parking1.domenebi.ge</span>
+                            <span>parking2.domenebi.ge</span>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</body>
+</html>
