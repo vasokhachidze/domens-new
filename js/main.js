@@ -1,21 +1,22 @@
 const test = document.querySelectorAll('.domen-box-left');
-const test2= document.querySelectorAll('.domen-box')
+const domenBox= document.querySelectorAll('.domen-box')
 const chk = document.createElement('i');
 const addCart = document.querySelector('.addCart span');
-test2.forEach(test2 =>{
-    const trigger = test2.querySelector('.domen-box-left');
-    const icon = test2.querySelector('.domen-box-left i')
+
+domenBox.forEach(dBox =>{
+    const trigger = dBox.querySelector('.domen-box-left');
+    const icon = dBox.querySelector('.domen-box-left i')
     trigger.addEventListener('click',()=>{
-        test2.nextElementSibling.classList.toggle('active-box')
+        dBox.nextElementSibling.classList.toggle('active-box')
         icon.classList.toggle('active-icon');
-        test2.classList.toggle('bac');
-        test2.classList.toggle('border-bottom-radius')
-        test2.nextElementSibling.classList.toggle('border-top-radius')
-        test2.nextElementSibling.classList.toggle('bac')
+        dBox.classList.toggle('bac');
+        dBox.classList.toggle('border-bottom-radius')
+        dBox.nextElementSibling.classList.toggle('border-top-radius')
+        dBox.nextElementSibling.classList.toggle('bac')
     })
-    const cartIcon = test2.querySelector('.cart-icon i')
-    const cartClick = test2.querySelector('.cart-click');
-    const cartBox = test2.querySelector('.cart-icon');
+    const cartIcon = dBox.querySelector('.cart-icon i')
+    const cartClick = dBox.querySelector('.cart-click');
+    const cartBox = dBox.querySelector('.cart-icon');
     cartBox.addEventListener('click',()=>{
        cartClick.classList.toggle('cart-click-active')
        cartIcon.classList.toggle('return-icon')
@@ -105,7 +106,7 @@ priceInput.forEach(input =>{
         }
     })
 })
-// simnol slider
+// simbol slider
 const simbolInput = document.querySelectorAll('.simbol-box input');
 const progressS = document.querySelector('.progressS');
 let simbolDif = 7;
@@ -134,7 +135,7 @@ const checkIcon = document.createElement('i');
 
 
 
-let secArr = [];
+// checkbox filter
 
 function myFynction(){
     for(let checkBox of checkBoxes){
@@ -148,8 +149,6 @@ function myFynction(){
                         box.style.display = 'none'
                     }
                 })
-            }else{
-                
             }
         
     }
