@@ -130,26 +130,43 @@ simbolInput.forEach(simbol =>{
 })
 
 // checkbox filter
-const checkBoxes = document.querySelectorAll('.second-line-check li input')
+const checkBoxes = document.querySelectorAll('.checkbox-box li input')
 const checkIcon = document.createElement('i');
 
 
 
 // checkbox filter
+let empty=[];
 
-function myFynction(){
-    for(let checkBox of checkBoxes){
-            if(checkBox.checked == true){
-                const container = document.querySelectorAll('.container');
-                container.forEach(box =>{
-                    if(box.classList.contains(checkBox.value)){
-                        box.style.display = 'block'
-    
-                    }else{
-                        box.style.display = 'none'
-                    }
-                })
-            }
-        
+function valid(){
+    let valid = false;
+    if(document.getElementById('ge').checked){
+       container.forEach(box =>{
+        if(box.classList.contains(document.getElementById('ge').value)){
+            box.style.display = 'block'
+        }else{
+            box.style.display = 'none'
+            
+        }
+       })
     }
+    else if(document.getElementById('comge').checked){
+        container.forEach(box =>{
+            if(box.classList.contains(document.getElementById('comge').value)){
+                box.style.display = 'block'
+            }else{
+                box.style.display = 'none'
+                
+            }
+           })
+    }
+    else if(document.getElementById('netge').checked){
+        valid = true;
+        console.log('true');
+    }else{
+        
+
+    }
+    
 }
+valid();

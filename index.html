@@ -61,6 +61,23 @@
             <h1>გაყიდე და იყიდე დომენი მარტივად</h1>
         </div>
     </section>
+    <section class="mobile-how-sale">
+        <div class="mobile-how-sale-div">
+            <div class="mobile-how-sale-left">
+                <select class="block text-sm md:hidden mr-4 p-3 border rounded-lg">
+                    <option value="">ყველა</option>
+                    <option value="newonsale">დამატების თარიღით</option>
+                    <option value="expiring">ვადის ამოწურვით</option>
+                    <option value="priceasc">ფასით</option>
+                    <option value="pricedesc">ფასით</option>
+                    <option value="alphabet">ანბანით</option>
+                </select>
+            </div>
+            <div class="sale-domen">
+                <h2><a href="#">როგორ გავყიდო დომენი?</a></h2>
+             </div>
+        </div>
+    </section>
     <section class="how-sale d-flex-between">
          <div class="domen-market-text">
             <span>დომენები მარკეტზე: <strong>703</strong></span>
@@ -108,28 +125,28 @@
                 <label for="">კატეგორიები</label>
      <!---------- start checkboxes  -------------->
                 <div class="checkbox-box">
-                    <ul>
-                        <li><input type="checkbox" name="" id=""><span>ბიზნესი</span></li>
-                        <li><input type="checkbox" name="" id=""><span>უძრავი ქონება</span></li>
-                        <li><input type="checkbox" name="" id=""><span>ავტო</span></li>
-                        <li><input type="checkbox" name="" id=""><span>მედიცინა</span></li>
-                        <li><input type="checkbox" name="" id=""><span>ტექნოლოგიები</span></li>
-                        <li><input type="checkbox" name="" id=""><span>თამაშები</span></li>
-                        <li><input type="checkbox" name="" id=""><span>გართობა და დასვენება</span></li>
-                        <li><input type="checkbox" name="" id=""><span>მედია</span></li>
-                        <li><input type="checkbox" name="" id=""><span>განათლება</span></li>
-                        <li><input type="checkbox" name="" id=""><span>კომერცია</span></li>
-                        <li><input type="checkbox" name="" id=""><span>ფინანსები</span></li>
-                        <li><input type="checkbox" name="" id=""><span>ბიზნესი</span></li>
-                    </ul>
+                    <!-- <ul>
+                        <li><input type="checkbox" name="" id="" value="ბიზნესი"><span>ბიზნესი</span></li>
+                        <li><input type="checkbox" name="" id="" value="უძრავიქონება"><span>უძრავი ქონება</span></li>
+                        <li><input type="checkbox" name="" id="" value="ავტო"><span>ავტო</span></li>
+                        <li><input type="checkbox" name="" id="" value="მედიცინა"><span>მედიცინა</span></li>
+                        <li><input type="checkbox" name="" id="" value="ტექნოლოგიები"><span>ტექნოლოგიები</span></li>
+                        <li><input type="checkbox" name="" id="" value="თამაშები"><span>თამაშები</span></li>
+                        <li><input type="checkbox" name="" id="" value="გართობადადასვენება"><span>გართობა და დასვენება</span></li>
+                        <li><input type="checkbox" name="" id="" value="მედია"><span>მედია</span></li>
+                        <li><input type="checkbox" name="" id="" value="განათლება"><span>განათლება</span></li>
+                        <li><input type="checkbox" name="" id="" value="კომერცია"><span>კომერცია</span></li>
+                        <li><input type="checkbox" name="" id="" value="ფინანსები"><span>ფინანსები</span></li>
+                        <li><input type="checkbox" name="" id="" value="ბიზნესი"><span>ბიზნესი</span></li>
+                    </ul> -->
                     <label for="">დომენის ზომა</label>
                     <ul class="second-line-check">
-                        <li><input type="checkbox" name="" id="ts" value=".ge" onclick="myFynction()"><span>.ge</span></li>
-                        <li><input type="checkbox" name="" id="" value=".com.ge" onclick="myFynction()"><span>.com.ge</span></li>
-                        <li><input type="checkbox" name="" id="" value=".net.ge" onclick="myFynction()"><span>.net.ge</span></li>
-                        <li><input type="checkbox" name="" id="" value=".org.ge" onclick="myFynction()"><span>.org.ge</span></li>
-                        <li><input type="checkbox" name="" id="" value=".edu.ge" onclick="myFynction()"><span>.edu.ge</span></li>
-                        <li><input type="checkbox" name="" id="" value=".school.ge" onclick="myFynction()"><span>.school.ge</span></li>
+                        <li><input type="checkbox" name="" id="ge" value=".ge" onclick="valid()"><span>.ge</span></li>
+                        <li><input type="checkbox" name="" id="comge" value=".com.ge"  onclick="valid()"><span>.com.ge</span></li>
+                        <li><input type="checkbox" name="" id="netge" value=".net.ge"  onclick="valid()"><span>.net.ge</span></li>
+                        <!-- <li><input type="checkbox" name="" id="" value=".org.ge"><span>.org.ge</span></li>
+                        <li><input type="checkbox" name="" id="" value=".edu.ge"><span>.edu.ge</span></li>
+                        <li><input type="checkbox" name="" id="" value=".school.ge"><span>.school.ge</span></li> -->
                     </ul>
                 </div>
     <!---------------end checkboxes -------------->
@@ -137,7 +154,7 @@
         </div>
         <!-- ----------start domens --------- -->
         <div class="domens">
-            <div class="container .ge" aria-valuenow="40000" data-filter="domenebi.ge">
+            <div class="container .ge ბიზნესი" aria-valuenow="40000" data-filter="domenebi.ge">
                 <div class="domen-box">
                     <div class="domen-box-left">
                             <i class="fa-solid fa-angle-down"></i>
@@ -177,7 +194,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container .com.ge" aria-valuenow="32000" data-filter="domenebi.com.ge">
+            <div class="container .com.ge უძრავიქონება" aria-valuenow="32000" data-filter="domenebi.com.ge">
                 <div class="domen-box">
                     <div class="domen-box-left">
                             <i class="fa-solid fa-angle-down"></i>
@@ -219,7 +236,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container .net.ge" aria-valuenow="41000" data-filter="domenebi.net.ge">
+            <div class="container .net.ge ავტო" aria-valuenow="41000" data-filter="domenebi.net.ge">
                 <div class="domen-box">
                     <div class="domen-box-left">
                             <i class="fa-solid fa-angle-down"></i>
@@ -261,7 +278,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container .org.ge" aria-valuenow="8000" data-filter="domenebi.org.ge">
+            <div class="container .org.ge მედიცინა" aria-valuenow="8000" data-filter="domenebi.org.ge">
                 <div class="domen-box">
                     <div class="domen-box-left">
                             <i class="fa-solid fa-angle-down"></i>
@@ -303,7 +320,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container .school.ge" aria-valuenow="23000" data-filter="domenebi.school.ge">
+            <div class="container .school.ge ტექნოლოგიები" aria-valuenow="23000" data-filter="domenebi.school.ge">
                 <div class="domen-box">
                     <div class="domen-box-left">
                             <i class="fa-solid fa-angle-down"></i>
@@ -345,7 +362,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container .edu.ge" aria-valuenow="45000" data-filter="domenebi.edu.ge">
+            <div class="container .edu.ge თამაშები" aria-valuenow="45000" data-filter="domenebi.edu.ge">
                 <div class="domen-box">
                     <div class="domen-box-left">
                             <i class="fa-solid fa-angle-down"></i>
@@ -387,7 +404,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container .web.ge" aria-valuenow="50000" data-filter="web.ge">
+            <div class="container .web.ge გართობადადასვენება" aria-valuenow="50000" data-filter="web.ge">
                 <div class="domen-box">
                     <div class="domen-box-left">
                             <i class="fa-solid fa-angle-down"></i>
@@ -429,7 +446,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container .com.ge" aria-valuenow="50" data-filter="web.com.ge">
+            <div class="container .com.ge მედია" aria-valuenow="50" data-filter="web.com.ge">
                 <div class="domen-box">
                     <div class="domen-box-left">
                             <i class="fa-solid fa-angle-down"></i>
@@ -471,7 +488,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container .net.ge" aria-valuenow="100" data-filter="web.net.ge">
+            <div class="container .net.ge განათლება" aria-valuenow="100" data-filter="web.net.ge">
                 <div class="domen-box">
                     <div class="domen-box-left">
                             <i class="fa-solid fa-angle-down"></i>
@@ -513,7 +530,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container .school.ge" aria-valuenow="500" data-filter="web.school.ge">
+            <div class="container .school.ge კომერცია" aria-valuenow="500" data-filter="web.school.ge">
                 <div class="domen-box">
                     <div class="domen-box-left">
                             <i class="fa-solid fa-angle-down"></i>
@@ -555,7 +572,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container .net.ge" aria-valuenow="15000" data-filter="web.net.ge">
+            <div class="container .net.ge ფინანსები" aria-valuenow="15000" data-filter="web.net.ge">
                 <div class="domen-box">
                     <div class="domen-box-left">
                             <i class="fa-solid fa-angle-down"></i>
@@ -597,7 +614,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container .org.ge" aria-valuenow="10000" data-filter="web.org.ge">
+            <div class="container .org.ge ბიზნესი" aria-valuenow="10000" data-filter="web.org.ge">
                 <div class="domen-box">
                     <div class="domen-box-left">
                             <i class="fa-solid fa-angle-down"></i>
@@ -639,7 +656,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container .ge" aria-valuenow="5000" data-filter="frontend.ge">
+            <div class="container .ge კომერცია" aria-valuenow="5000" data-filter="frontend.ge">
                 <div class="domen-box">
                     <div class="domen-box-left">
                             <i class="fa-solid fa-angle-down"></i>
@@ -681,7 +698,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container .com.ge" aria-valuenow="2000" data-filter="frontend.com.ge">
+            <div class="container .com.ge ბიზნესი" aria-valuenow="2000" data-filter="frontend.com.ge">
                 <div class="domen-box">
                     <div class="domen-box-left">
                             <i class="fa-solid fa-angle-down"></i>
@@ -723,7 +740,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container .school.ge" aria-valuenow="1000" data-filter="frontend.school.ge">
+            <div class="container .school.ge განათლება" aria-valuenow="1000" data-filter="frontend.school.ge">
                 <div class="domen-box">
                     <div class="domen-box-left">
                             <i class="fa-solid fa-angle-down"></i>

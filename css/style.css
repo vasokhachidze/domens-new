@@ -123,6 +123,56 @@ header{
 .bottom-header a:hover{
     color: #99CC66;
 }
+.mobile-how-sale{
+    display: none;
+}
+.mobile-how-sale-div{
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mobile-how-sale-div select{
+    width: 187px;
+    height: 46px;
+    border-radius: 10px;
+    border: 2px solid rgb(204, 196, 196);
+    padding: 0 10px;
+    outline: none;
+    font-family:'TKT' ,'medium','sans-serif';
+    font-size: 15px;
+}
+.mobile-how-sale-div option{
+    padding: 10px;
+}
+
+@media only screen and (max-width: 820px){
+    .bottom-header{
+        display: none;
+    }
+    .how-sale{
+        display: none;
+    }
+    .domens-body{
+        display: block !important;
+    }
+    .filter-body{
+        display: none !important;
+    }
+    .domens{
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+    .mobile-how-sale-div{
+        
+        padding: 0 30px;
+    }
+    .mobile-how-sale{
+        display: block;
+    }
+
+}
 /*============ start image's section========= */
 .bg-image{
     max-width: 1285px;
@@ -435,6 +485,7 @@ input[type=checkbox]:checked::after{
 }
 .domen-box-left h2{
     margin-left: 20px;
+    font-weight: 500;
 }.domen-price-box strong{
     font-size: 16px;
     font-weight: bold;
