@@ -137,36 +137,58 @@ const checkIcon = document.createElement('i');
 
 // checkbox filter
 let empty=[];
+let emptyTwo=[];
 
 function valid(){
-    let valid = false;
-    if(document.getElementById('ge').checked){
-       container.forEach(box =>{
-        if(box.classList.contains(document.getElementById('ge').value)){
-            box.style.display = 'block'
-        }else{
-            box.style.display = 'none'
+    container.forEach(box =>{
+    for(let checkBox of checkBoxes){
+        
+        if(checkBox.checked == true){
             
-        }
-       })
-    }
-    else if(document.getElementById('comge').checked){
-        container.forEach(box =>{
-            if(box.classList.contains(document.getElementById('comge').value)){
-                box.style.display = 'block'
-            }else{
-                box.style.display = 'none'
+                if(box.classList.contains(checkBox.value)){
+                    empty.push(box);
+                    empty.forEach(el =>{
+                        el.style.display = 'block'
+                    })
+                }else{
+                    box.style.display = 'none'
+                }    
                 
             }
-           })
-    }
-    else if(document.getElementById('netge').checked){
-        valid = true;
-        console.log('true');
-    }else{
-        
+            
+            else if(checkBox.checked == false){
+                 if(box.classList.contains(checkBox.value)){
+                    emptyTwo.push(box);
+                    emptyTwo.forEach(el =>{
+                        el.style.display = 'none';
+                    })
+                 }
+            }
 
-    }
-    
+        }
+    })
 }
-valid();
+
+
+
+
+
+// function valid(){
+//     for(let checkBox of checkBoxes){
+//         if(checkBox.checked == true){
+//             container.forEach(box =>{
+//                 if(box.classList.contains(checkBox.value)){
+//                     empty.push(box);
+//                     empty.forEach(b=>{
+//                         b.style.display = 'block'
+//                     })
+                    
+//                 }else{
+//                     box.style.display = 'none'
+//                 }
+//             })
+//         }
+//     }
+    
+    
+// }
